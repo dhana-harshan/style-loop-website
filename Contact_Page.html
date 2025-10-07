@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Loop | Contact us</title>
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <style>
+
+      /* Background Section */
+
+        html body {
+            background-color:rgb(50, 47, 47);
+        }
+        
+      /* Header section */
+
+        .header{
+            background-color:#222;
+            width:auto;
+            height:auto;
+            display:flex; align-items:center; justify-content:space-between;
+            border-bottom: 3px solid #d1b53c;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .header a{
+            text-decoration: none;
+        }
+        .branding {
+            display:flex; align-items:center; justify-content:space-between;
+            padding: 14px 10px;
+        }
+        .branding img{
+            width: 80px; height:85px; border-radius:10px;
+            display:block;
+            align-content: center;
+        }
+        .branding h1{
+            font: size 6px;
+            color:#d1b53c;
+            display: flex;
+        }
+        .nav a{
+            display: inline-block;
+            align-items:center;
+            justify-content:space-between;
+            padding: 14px 0px;
+            text-decoration:none; 
+            color:#ddc56e;
+            padding: 8px 14px; 
+            border-radius: 12px; 
+            font-weight: 600;
+            transition: transform 0.3s;
+
+        }
+        .nav a:hover{background-color:#c0a9170d;}
+        .nav a.active{
+            background:#dfc360; 
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+      
+        /* Contact Us Section */
+        
+        h3 {
+          font-size:xx-large;
+          color: rgb(221, 181, 34);
+        }
+        
+        .section p {
+          color: white;
+          font-size:24px;
+        }
+
+       .container{
+          width: min(1125px, 92%);
+          margin: 0 auto;
+        }
+
+       .section{
+          padding: 16px 0 8px;
+        }
+        .section h3{ margin: 0 0 8px; }
+        
+        form{
+          background-color:#dfc360; 
+          padding: 16px; 
+          border-radius: 16px;
+          box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        .form-row{
+          display:grid; 
+          grid-template-columns: 1fr 1fr; 
+          gap:14px;
+        }
+
+        label{ 
+          color:black;
+          font-weight:600; 
+          font-size:22px;
+          display:block; 
+          margin: 10px 0 7px; 
+        }
+        
+        input[type="text"], input[type="email"], select, textarea {
+          width:90%; 
+          padding: 10px 12px; 
+          border:1px solid #000000; 
+          border-radius: 12px;
+        }
+
+        textarea{ 
+          width: 95.3%;
+          height: 140px; 
+        }
+
+        .contact-methods{ 
+          display:flex; 
+          gap:18px; 
+          padding:0 10px;
+        }
+
+        .Buttons{ 
+          display:flex; 
+          gap:12px; 
+          margin-top: 12px; 
+        }
+
+        button[type="submit"]{
+          background-color: goldenrod; 
+          color:#000000;
+          border-radius: 12px;
+          margin:25px;
+	        width:9%;
+          font-size:20px;
+          font-weight:570;
+          height: 40px;
+        }
+
+        button[type="reset"]{
+          background:#b7c1bd; 
+          color:#000000;
+          border-radius: 12px;
+          margin:25px;
+	        width:9%;
+          font-size:20px;
+          font-weight:570;
+          height: 40px;
+        }
+
+        form button:hover{
+          background:gold;
+        }
+        select{
+          width: 95%;
+        }
+
+      /* Footer Secton */
+
+      .footer{
+        margin-top: 38px;
+        background: #222;
+        color: #ddc56e;
+        border-top: 3px solid #d1b53c;
+      }
+
+     .footer-top {
+        padding: 22px 0;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 2fr 1fr 0.5fr 1fr; 
+        max-width: 1200px;
+        margin: 0 auto; 
+      }
+      .footer h4{ 
+          margin: 6px 0 8px; 
+          font-size: larger;
+      }
+      .footer a{ color:#ddc56e; 
+        text-decoration:none;
+      }
+
+      .footer a:hover{background-color:#cdb6220d;}
+      .footer a:hover{color:yellow;}
+
+      .footer-bottom{
+        padding: 10px 0;
+        border-top: 2px solid #625f3d;
+        font-size: 0.9rem;
+        color: #ddc56e;
+        text-align: center; 
+      }
+      .footer-top img{
+        width: auto;
+        height: 60px;
+      }
+      .tag-line{
+        font-size: large;
+      }
+        .contacts img{
+        width:auto;
+        height:15px;
+        object-position: 5px 2px;
+      }
+      .contacts span img{
+        width: auto;
+        height:25px;
+        object-position: 5px 3px ;
+        margin: 0px -3px 0px;
+        
+      }
+      .contacts p {
+        margin: 11px -16px 10px;
+      }
+     
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Header Section -->
+     
+    <div class="header">
+        <a href="Home_Page.html">
+        <div class="branding">
+            <img src="Images/Logo.png" alt="Logo Image">
+            <h1>Style Loop</h1>
+        </div>
+        </a>
+        <div class="nav">
+            <a href="Home_Page.html">Home</a>
+            <a href="About_Page.html">About</a>
+            <a href="Collections_Page.html">Collections</a>
+            <a class="active" href="Contact_Page.html">Contact</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+    <div class="section">
+      
+      <h3>Contact Us</h3>
+      <p>Have a question, feedback, or want to check your order status? Send us a message below and we'll respond you as soon as possible.</p>
+
+      <form action="#" method="post">
+
+        <div class="form-row">
+
+          <div>
+            <label for="name">Customer Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email"  id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Enter the subject of your inquiry" required>
+          </div>
+          
+          <div>
+            <label for="purpose">Purpose of Inquiry</label>
+            <select id="purpose" required>
+              <option>-- Select --</option>
+              <option>General Inquiry</option>
+              <option>Order Status</option>
+              <option>Product Inquiry</option>
+              <option>Feedback/Suggestions</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div>
+          <label>Preferred Contact Methods (choose one or more)</label>
+          <div class="contact-methods">
+            <label> Email <input type="checkbox" name="pref-cont"></label>
+            <label> Call <input type="checkbox" name="pref-cont"></label>
+            <label> Text <input type="checkbox" name="pref-cont"></label>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <div class="Buttons">
+          <button class="sub" type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+
+      </form>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+
+  <div class="footer">
+    <div class="footer-top">
+      <div>
+        <h4>Style Loop</h4>
+        <p class="tag-line">Timeless collections and fresh drops. Designed for comfort, made to last.</p>
+        <img src="Images/Rewards.png">
+      </div>
+      
+       <div class="contacts">
+        <h4>Contact Info</h4>
+        <P>&nbsp;&nbsp;<img src="Images/WhatsApp_icon.png">&nbsp;&nbsp;+94 71 123 4567</P>
+        <p><img src="Images/Call_icon.png">+94 81 765 4321</p>
+        <p><img src="Images/Mail_icon.png">styleloop@gmail.com</p>
+        <p><span><img src="Images/Location_icon.png"></span>123, Peradeniya Rd, Kandy</p>
+       
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="Home_Page.html">Home</a></p>
+        <p><a href="About_Page.html">About us</a></p>
+        <p><a href="Collections_Page.html">Collections</a></p>
+        <p><a href="Contact_Page.html">Contact us</a></p>
+      </div>
+
+      <div >
+        <h4>Store Timings</h4>
+        <p>Mon–Fri : 8.30 AM – 7.30 PM</p>
+        <p>Saturday : 8.30 AM – 2.30 PM</p>
+        <p>Sunday : Closed</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+     © 2025 Style Loop. All rights reserved. | Privacy Policy | Terms of Service
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Loop | Home</title>
+	<link rel="icon" type="image/png" href="Images/Logo.png">
+    <style>
+
+      /* Background Section */
+
+        html body {
+            background-color:rgb(50, 47, 47);
+        }
+        
+      /* Header section */
+
+        .header{
+            background-color:#222;
+            width:auto;
+            height:auto;
+            display:flex; align-items:center; justify-content:space-between;
+            border-bottom: 3px solid #d1b53c;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .header a{
+            text-decoration: none;
+        }
+        .branding {
+            display:flex; align-items:center; justify-content:space-between;
+            padding: 14px 10px;
+        }
+        .branding img{
+            width: 80px; height:85px; border-radius:10px;
+            display:block;
+            align-content: center;
+        }
+        .branding h1{
+            font: size 6px;
+            color:#d1b53c;
+            display: flex;
+        }
+        .nav a{
+            display: inline-block;
+            align-items:center;
+            justify-content:space-between;
+            padding: 14px 0px;
+            text-decoration:none; 
+            color:#ddc56e;
+            padding: 8px 14px; 
+            border-radius: 12px; 
+            font-weight: 600;
+            transition: transform 0.3s;
+
+        }
+        .nav a:hover{background-color:#c0a9170d;}
+        .nav a.active{
+            background:#dfc360; 
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+      /* Intro section */
+
+        .intro{
+            color:rgb(249, 245, 245);
+            text-align:justify;
+            padding: 15px 25px;
+            margin:25px;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight:600;
+            width: 92.7%;
+            height: 400px;
+            background-image: url('Images/Backgound_Image.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+        }
+        .intro b{
+          font-size:34px;
+          color: rgb(221, 181, 34);
+        }
+
+      /*Best Sellers Section*/
+
+        .product-layout{
+            display:grid; gap: 18px;
+        }
+        .three-cols{ grid-template-columns: repeat(4, 1fr);}
+
+        .card{
+            background-color: rgba(70, 66, 66, 0.6);   
+            border-radius: 16px; 
+            overflow:hidden; 
+            box-shadow: 0 20px 44px rgba(100, 54, 54, 0.06);
+            display:flex; flex-direction:column;
+        }
+        .card img{ 
+          width:100%; 
+          height: 550px; 
+          object-fit:cover; 
+        }
+        .card .content{
+            font-size: larger;
+            color: #E5E5E5;
+            padding: 14px 14px 16px;
+        } 
+       h3 {
+          font-size:xx-large;
+          color: rgb(221, 181, 34);
+       }
+        .price{ font-weight: 800; }
+        .price s{ 
+            font-weight: 400;
+            font-size: medium;
+        }
+        .card img {
+            width:100%; 
+            height: 500px;  
+            object-fit:cover; 
+            transition: transform 0.4s ease; 
+        }
+        .card {
+          position: relative;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-8px); 
+          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .card:hover img {
+          transform: scale(1.06); 
+        }
+        
+		/*View All Button*/
+
+        .view-all-button {
+          text-align: center;  
+          margin: 20px 0; 
+        }      
+
+		button{
+          background-color:rgb(50, 47, 47);
+          color:white;
+          border-radius: 12px;
+          margin:15px;
+	        width:18%;
+          font-size:20px;
+          font-weight:570;
+          height: 50px;
+        }
+		button:hover{
+          background:#dfc360;
+          color: #000000;
+        }
+
+        /* Mega Offer Img Section */
+
+       Marquee img{
+        width: auto;
+        height: 100px;
+       }
+
+       /* Ratings Section */
+
+        .Ratings {
+        position:absolute;
+        background: #cdcdcb; 
+        color: #000000;
+        font-weight:bolder;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 8px;
+        bottom: 185px;
+        left: 10px;
+        box-shadow: 0 2px 6px rgba(196, 191, 191, 0.2);
+      }
+
+       /* Offer Tag */
+
+      .offer-tag {
+        position: absolute;
+        background: #d62828; 
+        color: #fff;
+        font-weight:bolder;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 8px;
+        top: 10px;
+        left: 10px;
+        box-shadow: 0 2px 6px rgba(196, 191, 191, 0.2);
+      }
+
+      .card {
+        position: relative; 
+      }
+
+      /* Footer Secton */
+
+      .footer{
+        margin-top: 38px;
+        background: #222;
+        color: #ddc56e;
+        border-top: 3px solid #d1b53c;
+      }
+
+     .footer-top {
+        padding: 22px 0;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 2fr 1fr 0.5fr 1fr; 
+        max-width: 1200px;
+        margin: 0 auto; 
+      }
+      .footer h4{ 
+          margin: 6px 0 8px; 
+          font-size: larger;
+      }
+      .footer a{ color:#ddc56e; 
+        text-decoration:none;
+      }
+      
+      .footer a:hover{background-color:#cdb6220d;}
+      .footer a:hover{color:yellow;}
+
+      .footer-bottom{
+        padding: 10px 0;
+        border-top: 2px solid #625f3d;
+        font-size: 0.9rem;
+        color: #ddc56e;
+        text-align: center; 
+      }
+      .footer-top img{
+        width: auto;
+        height: 60px;
+      }
+      .tag-line{
+        font-size: large;
+      }
+        .contacts img{
+        width:auto;
+        height:15px;
+        object-position: 5px 2px;
+      }
+      .contacts span img{
+        width: auto;
+        height:25px;
+        object-position: 5px 3px ;
+        margin: 0px -3px 0px;
+        
+      }
+      .contacts p {
+        margin: 11px -16px 10px;
+      }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Header Section -->
+     
+    <div class="header">
+        <a href="Home_Page.html">
+        <div class="branding">
+            <img src="Images/Logo.png" alt="Logo Image">
+            <h1>Style Loop</h1>
+        </div>
+        </a>
+        <div class="nav">
+            <a class="active" href="Home_Page.html">Home</a>
+            <a href="About_Page.html">About</a>
+            <a href="Collections_Page.html">Collections</a>
+            <a href="Contact_Page.html">Contact</a>
+        </div>
+    </div>
+
+    <!--Intro Section-->
+    
+    <div class="intro">
+        <p>Everyday style. Effortless comfort. <br>
+        Welcome to <b>Style Loop</b>, a boutique men's clothing store where quality fabrics meet timeless design. Our collections are crafted to give you versatile looks that fit seamlessly into your daily life — from study sessions to weekend outings. <br><br>
+        At<b>Style Loop</b>, we believe fashion should be both stylish and practical. That's why our pieces are designed to bring you comfort, durability, and a touch of elegance in every outfit. Explore our best-sellers and discover clothing that keeps you looking sharp while feeling effortless.
+    </div>
+
+    <!-- Best Sellers Section -->
+
+   <div class="section">
+  <h3>Top Sellers</h3>
+  <div class="product-layout three-cols">
+    
+   <div class="card">
+      <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/Shirt_2.png" alt="Shirt 2">
+      <div class="content">
+        <h4>AIDAN PAUL Men Regular Fit Washed Cut Away Collar Casual Denim Shirt</h4>
+        <p class="price">Rs. 4,649</p>
+      </div>
+    </div>
+
+     <div class="card">
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/T_Shirt_4.png" alt="T-Shirt 4">
+      <div class="content">
+        <h4>Graphic Printed Drop-Shoulder Sleeves Cotton Oversized T-shirt</h4>
+        <p class="price">Rs. 2,979</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/Cargo_Pants.png" alt="Cargo Trousers">
+      <div class="content">
+        <h4>The Roadster Life Co Men Regular Fit Cargo Chinos Trousers - Khaki</h4>
+        <p class="price">Rs. 3,849</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/White_Sneakers.png" alt="Belts">
+      <div class="content">
+        <h4>PENNEN Men's Round Toe Textured and patterned White Sneakers </h4>
+        <p class="price">Rs. 4,399 </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+ <!-- View all button -->
+
+<div class="view-all-button">
+  <a href="Collections_Page.html">
+    <button type="button">View All Collections 👉🏼</button>
+  </a>
+</div>
+
+<!--Our Offers Section-->
+
+<div class="section">
+  <h3>Our Offers</h3>
+  <Marquee>
+    <img src="Images/offer_img.png">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <img src="Images/offer_img.png">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <img src="Images/offer_img.png">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <img src="Images/offer_img.png">
+  </Marquee><br><br>
+  <div class="product-layout three-cols">
+    
+    <div class="card">
+      <span class="offer-tag">35% OFF</span>
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/T_Shirt_5.png" alt="T-Shirt 5">
+      <div class="content">
+        <h4>JUMPCUTS Men Typography Printed Polo Collar Full Sleeves T-shirt</h4>
+        <p class="price">Rs. 3,548 &nbsp; <s>Rs.5,459</s></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="offer-tag">30% OFF</span>
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/Jeans.png" alt="Demin Jeans">
+      <div class="content">
+        <h4>Roadster The Lifestyle Co Men Baggy Fit Heavy Fade Denim Jeans</h4>
+        <p class="price">Rs. 3,058 &nbsp; <s>Rs.4,369</s></p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="offer-tag">38% OFF</span>
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/Watch_Img.png" alt="Casio Watch">
+      <div class="content">
+        <h4>Fastrack Men Vyb Arcane Dial & Bracelet Style Straps Analogue Watch </h4>
+        <p class="price">Rs. 4,805 &nbsp; <s>Rs.7,750</s></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="offer-tag">36% OFF</span>
+     <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/Boots.png" alt="Outdoor Boots">
+      <div class="content">
+        <h4>Vellinto GIZMO Outdoor Casual Military Boots For Men - Black </h4>
+        <p class="price">Rs. 4,274 &nbsp; <s>Rs.6,679</s></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ <!-- View all button -->
+
+<div class="view-all-button">
+  <a href="Collections_Page.html">
+    <button type="button">View All Collections 👉🏼</button>
+  </a>
+</div>
+
+<!-- Footer Section -->
+
+  <div class="footer">
+    <div class="footer-top">
+      <div>
+        <h4>Style Loop</h4>
+        <p class="tag-line">Timeless collections and fresh drops. Designed for comfort, made to last.</p>
+        <img src="Images/Rewards.png">
+      </div>
+      
+       <div class="contacts">
+        <h4>Contact Info</h4>
+        <P>&nbsp;&nbsp;<img src="Images/WhatsApp_icon.png">&nbsp;&nbsp;+94 71 123 4567</P>
+        <p><img src="Images/Call_icon.png">+94 81 765 4321</p>
+        <p><img src="Images/Mail_icon.png">styleloop@gmail.com</p>
+        <p><span><img src="Images/Location_icon.png"></span>123, Peradeniya Rd, Kandy</p>
+       
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="Home_Page.html">Home</a></p>
+        <p><a href="About_Page.html">About us</a></p>
+        <p><a href="Collections_Page.html">Collections</a></p>
+        <p><a href="Contact_Page.html">Contact us</a></p>
+      </div>
+
+      <div >
+        <h4>Store Timings</h4>
+        <p>Mon–Fri : 8.30 AM – 7.30 PM</p>
+        <p>Saturday : 8.30 AM – 2.30 PM</p>
+        <p>Sunday : Closed</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+     © 2025 Style Loop. All rights reserved. | Privacy Policy | Terms of Service
+    </div>
+
+  </div>
+</body>
+</html>

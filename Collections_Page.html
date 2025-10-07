@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Loop | Collections</title>
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <style>
+
+      /* Background Section */
+
+        html body {
+            background-color:rgb(50, 47, 47);
+        }
+        
+      /* Header section */
+
+        .header{
+            background-color:#222;
+            width:auto;
+            height:auto;
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between;
+            border-bottom: 3px solid #d1b53c;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .header a{
+            text-decoration: none;
+        }
+        .branding {
+            display:flex; align-items:center; 
+            justify-content:space-between;
+            padding: 14px 10px;
+        }
+        .branding img{
+            width: 80px; height:85px; 
+            border-radius:10px;
+            display:block;
+            align-content: center;
+        }
+        .branding h1{
+            font: size 6px;
+            color:#d1b53c;
+            display: flex;
+        }
+        .nav a{
+            display: inline-block;
+            align-items:center;
+            justify-content:space-between;
+            padding: 14px 0px;
+            text-decoration:none; 
+            color:#ddc56e;
+            padding: 8px 14px; 
+            border-radius: 12px; 
+            font-weight: 600;
+            transition: transform 0.3s;
+
+        }
+        .nav a:hover{background-color:#c0a9170d;}
+        .nav a.active{
+            background:#dfc360; 
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+        
+         /* Catalog Navigation */
+         
+        .catalog-nav {
+          background: #434242;
+          text-align: center;
+          padding: 12px;
+          margin: 20px auto;
+          border-radius: 8px;
+          max-width: 800px;
+        }
+        .catalog-nav a {
+          color: #ddc56e;
+          margin: 0 15px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: large;
+        }
+        .catalog-nav a:hover { color:yellow; }
+        .catalog-nav a:hover{background-color:#cdb6220d;}
+
+        /* Collections Section */
+
+        .product-layout{
+            display:grid; gap: 18px;
+        }
+        .three-cols{ grid-template-columns: repeat(4, 1fr);}
+
+        .card{
+            background-color: rgba(70, 66, 66, 0.6);  
+            border-radius: 16px; 
+            overflow:hidden; 
+            box-shadow: 0 20px 44px rgba(100, 54, 54, 0.06);
+            display:flex; flex-direction:column;
+        }
+        .card img{ 
+          width:100%; 
+          height: 550px; 
+          object-fit:cover; 
+        }
+        .card .content{
+            font-size: larger;
+            color: #E5E5E5;
+            padding: 14px 14px 16px;
+        } 
+       h3 {
+          font-size:xx-large;
+          color: rgb(221, 181, 34);
+       }
+        .price{ font-weight: 800; }
+        .price s{ 
+            font-weight: 400;
+            font-size: medium;
+        }
+        .card img {
+            width:100%; 
+            height: 500px; 
+            object-fit:cover; 
+            transition: transform 0.4s ease; 
+          }
+        .card {
+          position: relative;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-8px); 
+          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .card:hover img {
+          transform: scale(1.06); 
+        }
+
+        /* Ratings Section */
+
+        .Ratings {
+        position:absolute;
+        background: #cdcdcb; 
+        color: #000000;
+        font-weight:bolder;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 8px;
+        bottom: 185px;
+        left: 10px;
+        box-shadow: 0 2px 6px rgba(196, 191, 191, 0.2);
+      }
+
+      /* Catalog Table Section */
+
+      .container{
+        width: min(100%, 92%);
+        margin: 0 auto;
+        }
+
+      table{
+        width: 100%;
+        border-collapse: collapse; 
+        background-color: #3d3b3b;
+        border-radius: 14px; 
+        overflow:hidden; 
+        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      }
+      th, td{
+        text-align:left; 
+        color: #E5E5E5;
+        font-size: 18px;
+        font-weight: 900;
+        padding: 12px 14px; 
+        border-bottom: 1px solid #f0f0f0;
+      }
+      th{
+        background-color: #dfc360;
+        color: #000000;
+        font-size: 21px;
+        font-weight: 900;
+      }
+      tr:hover{ background: #4f4d4d;
+      
+      }
+     
+      /* Footer Secton */
+
+      .footer{
+        margin-top: 38px;
+        background: #222;
+        color: #ddc56e;
+        border-top: 3px solid #d1b53c;
+      }
+
+     .footer-top {
+        padding: 22px 0;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 2fr 1fr 0.5fr 1fr; 
+        max-width: 1200px;
+        margin: 0 auto; 
+      }
+      .footer h4{ 
+          margin: 6px 0 8px; 
+          font-size: larger;
+      }
+      .footer a{ color:#ddc56e; 
+        text-decoration:none;
+      }
+
+      .footer a:hover{background-color:#cdb6220d;}
+      .footer a:hover{color:yellow;}
+
+      .footer-bottom{
+        padding: 10px 0;
+        border-top: 2px solid #625f3d;
+        font-size: 0.9rem;
+        color: #ddc56e;
+        text-align: center; 
+      }
+      .footer-top img{
+        width: auto;
+        height: 60px;
+      }
+      .tag-line{
+        font-size: large;
+      }
+        .contacts img{
+        width:auto;
+        height:15px;
+        object-position: 5px 2px;
+      }
+      .contacts span img{
+        width: auto;
+        height:25px;
+        object-position: 5px 3px ;
+        margin: 0px -3px 0px;
+        
+      }
+      .contacts p {
+        margin: 11px -16px 10px;
+      }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+     
+    <div class="header">
+        <a href="Home_Page.html">
+        <div class="branding">
+            <img src="Images/Logo.png" alt="Logo Image">
+            <h1>Style Loop</h1>
+        </div>
+        </a>
+        <div class="nav">
+            <a href="Home_Page.html">Home</a>
+            <a href="About_Page.html">About</a>
+            <a class="active" href="Collections_Page.html">Collections</a>
+            <a href="Contact_Page.html">Contact</a>
+        </div>
+        </div>
+    
+<!-- Collections Section -->
+    
+        <!-- Catalog Navigation -->
+
+  <div class="catalog-nav">
+    <a href="#top-wears">Top Wears</a>
+    <a href="#bottom-wears">Bottom Wears</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#footwear">Footwear</a>
+    <a href="#product_catalog">Product Catalog</a>
+    <a href="#size_chart">Size Chart</a>
+  </div>
+
+
+        <!-- Top Wears -->
+
+<div class="section" id="top-wears">
+  <h3>Top Wears</h3>
+  <div class="product-layout three-cols">
+    
+    <div class="card">
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/Shirt_1.jpeg" alt="Shirt 1">
+      <div class="content">
+        <h4>Multicolor Structured Puff Waffle Striped Half Sleeves Casual Shirt</h4>
+        <p class="price">Rs. 3,549 </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/Shirt_2.png" alt="Shirt 2">
+      <div class="content">
+        <h4>AIDAN PAUL Men Regular Fit Washed Cut Away Collar Casual Denim Shirt</h4>
+        <p class="price">Rs. 4,649</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/Shirt_3.png" alt="Shirt 3">
+      <div class="content">
+        <h4>Maniac Men Opaque Casual Shirt - Solid Brown</h4>
+        <p class="price">Rs. 5,489</p>
+      </div>
+    </div>
+    
+<div class="card">
+      <span class="Ratings">4.1 ⭐</span>
+      <img src="Images/Shirt_4.png" alt="Shirt 4">
+      <div class="content">
+        <h4>LB Fashion Men’s Geometric Printed Slim Fit Long Sleeve Shirt</h4>
+        <p class="price">Rs. 5,169</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">3.9 ⭐</span>
+      <img src="Images/Shirt_5.png" alt="Shirt 5">
+      <div class="content">
+        <h4>JAGRUTI fashion Men Comfort Fit Maroon Spread Collar Formal Shirt </h4>
+        <p class="price">Rs. 3,769 </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/Shirt_6.png" alt="Shirt 6">
+      <div class="content">
+        <h4>Indian Garage Co's Men Grey & White Checked Cotton Semi-Formal Shirt</h4>
+        <p class="price">Rs. 4,849</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/T_Shirt_1.png" alt="T-Shirt 1">
+      <div class="content">
+        <h4>Peregrine by Pantaloons Men Striped Polo Collar Cotton T-shirt </h4>
+        <p class="price">Rs. 3,379</p>
+      </div>
+    </div>
+    
+<div class="card">
+      <span class="Ratings">4.4 ⭐</span>
+      <img src="Images/T_Shirt_2.png" alt="T-Shirt 2">
+      <div class="content">
+        <h4>POLO Men's Plain Short Sleeve Golfer Camel coloured T-shirt</T-shirt></h4>
+        <p class="price">Rs. 4,779</p>
+      </div>
+    </div>
+
+     <div class="card">
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/T_Shirt_3.png" alt="T-Shirt 3">
+      <div class="content">
+        <h4>SANE ORIGINALS Striped Polo Collar Regular Fit T-shirt – Rich Grey</h4>
+        <p class="price">Rs. 3,839 </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/T_Shirt_4.png" alt="T-Shirt 4">
+      <div class="content">
+        <h4>Graphic Printed Drop-Shoulder Sleeves Cotton Oversized T-shirt</h4>
+        <p class="price">Rs. 2,979</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/T_Shirt_5.png" alt="T-Shirt 5">
+      <div class="content">
+        <h4>JUMPCUTS Men Typography Printed Polo Collar Full Sleeves T-shirt</h4>
+        <p class="price">Rs. 5,459</p>
+      </div>
+    </div>
+    
+<div class="card">
+  <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/Hoodie.png" alt="Hoodie">
+      <div class="content">
+        <h4>Status Quo's Typography Printed Hooded Sweatshirt - Sky blue</h4>
+        <p class="price">Rs. 3,479</p>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+      <!-- Bottom Wears -->
+
+<div class="section" id="bottom-wears">
+  <h3>Bottom Wears</h3>
+  <div class="product-layout three-cols">
+    
+<div class="card">
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/Jeans.png" alt="Demin Jeans">
+      <div class="content">
+        <h4>Roadster The Lifestyle Co Men Baggy Fit Heavy Fade Denim Jeans</h4>
+        <p class="price">Rs. 4,369 </p>
+      </div>
+    </div>
+
+     <div class="card">
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/Cargo_Pants.png" alt="Cargo Trousers">
+      <div class="content">
+        <h4>The Roadster Life Co Men Regular Fit Cargo Chinos Trousers - Khaki</h4>
+        <p class="price">Rs. 3,849</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/Formal_Trousers.png" alt="Formal Trousers">
+      <div class="content">
+        <h4>MOOSE Men’s Semi-Formal Chino Pant - Dark Blue</h4>
+        <p class="price">Rs. 3,539</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/Track_Pant.png" alt="Track Pant">
+      <div class="content">
+        <h4>The Modern Soul Men Cotton Mid Rise Track Pants - Brown</h4>
+        <p class="price">Rs. 2,699</p>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+      <!-- Accessories  -->
+<div class="section" id="accessories">
+  <h3>Accessories</h3>
+  <div class="product-layout three-cols">
+    
+<div class="card">
+      <span class="Ratings">4.9 ⭐</span>
+      <img src="Images/Belts.png" alt="Belts">
+      <div class="content">
+        <h4>Provogue Men's Pack of 2 Black Textured Leather Belt</h4>
+        <p class="price">Rs. 2,649 </p>
+      </div>
+    </div>
+
+     <div class="card">
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/Bracelet.png" alt="Bracelet">
+      <div class="content">
+        <h4>Roadster The Lifestyle Co. Silver-Plated Textured Link Chain Bracelet</h4>
+        <p class="price">Rs. 979</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/Watch_Img.png" alt="Casio Watch">
+      <div class="content">
+        <h4>Fastrack Men Vyb Arcane Dial & Bracelet Style Straps Analogue Watch </h4>
+        <p class="price">Rs. 7,750</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/Cap.png" alt="Cap">
+      <div class="content">
+        <h4>SELLORIA Men Cotton Baseball Cap with Patch Detail</h4>
+        <p class="price">Rs. 1,199</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        <!-- Footwears -->
+
+<div class="section" id="footwear">
+  <h3>Footwear</h3>
+  <div class="product-layout three-cols">
+    
+<div class="card">
+      <span class="Ratings">4.8 ⭐</span>
+      <img src="Images/White_Sneakers.png" alt="Belts">
+      <div class="content">
+        <h4>PENNEN Men's Round Toe Textured and patterned White Sneakers </h4>
+        <p class="price">Rs. 4,399 </p>
+      </div>
+    </div>
+
+     <div class="card">
+      <span class="Ratings">4.6 ⭐</span>
+      <img src="Images/Blue_Sneakers.png" alt="Blue Sneakers">
+      <div class="content">
+        <h4>BRUTON 301-Aviator Casual Sneakers For Men - White and Blue </h4>
+        <p class="price">Rs. 5,989</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="Ratings">4.7 ⭐</span>
+      <img src="Images/Boots.png" alt="Outdoor Boots">
+      <div class="content">
+        <h4>Vellinto GIZMO Outdoor Casual Military Boots For Men - Black </h4>
+        <p class="price">Rs. 6,679</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <span class="Ratings">4.5 ⭐</span>
+      <img src="Images/Sliders.png" alt="Sliders">
+      <div class="content">
+        <h4>Killer Brown Tan Printed Sliders for men </h4>
+        <p class="price">Rs. 2,879</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Catalog Section-->
+
+<div class="container">
+<div class="section" id="product_catalog">
+  <h3>Product Catalog</h3>
+  <table border="1">
+    <tr>
+      <th>Item Code</th>
+      <th>Item Name</th>
+      <th>Description</th>
+      <th>Price (LKR)</th>
+      <th>Available Sizes</th>
+    </tr>
+
+    <!-- Top Wears -->
+
+     <tr><th colspan="5">Top Wears</th></tr>
+
+    <tr>
+      <td>TW-001</td>
+      <td>Multicolor Structured Puff Waffle Striped Shirt</td>
+      <td>Half-sleeve casual striped shirt, breathable cotton blend.</td>
+      <td>Rs. 3,549</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-002</td>
+      <td>AIDAN PAUL Men Regular Fit Washed Cut Away Collar Casual Denim Shirt</td>
+      <td>Regular Fit Washed Cut Away Collar lightweight Casual Denim Shirt.</td>
+      <td>Rs. 4,649</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-003</td>
+      <td>Maniac Men Opaque Casual Shirt – Solid Brown</td>
+      <td>Full-sleeve casual solid brown cotton shirt.</td>
+      <td>Rs. 5,489</td>
+      <td>S, M, L, XL</td>
+    </tr>
+    
+    <tr>
+      <td>TW-004</td>
+      <td>LB Fashion Men’s Geometric Printed Slim Fit Shirt</td>
+      <td>Slim-fit geometric print long-sleeve shirt.</td>
+      <td>Rs. 5,169</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-005</td>
+      <td>JAGRUTI fashion Men Comfort Fit Maroon Spread Collar Formal Shirt </td>
+      <td>Tailored-fit formal maroon rich cotton shirt.</td>
+      <td>Rs. 3,769</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-006</td>
+      <td>Indian Garage Co. Grey & White Checked Shirt</td>
+      <td>Semi-formal checked cotton shirt, button-down style.</td>
+      <td>Rs. 4,849</td><td>S, M, L, XL</td>
+    </tr>
+
+
+    <tr>
+      <td>TW-007</td>
+      <td>Peregrine Striped Polo Collar Cotton T-shirt</td>
+      <td>Casual striped polo t-shirt in soft cotton.</td>
+      <td>Rs. 3,379</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-008</td>
+      <td>POLO Men’s Plain Short Sleeve Golfer T-shirt</td>
+      <td>Camel-colored polo t-shirt with classic golfer fit.</td>
+      <td>Rs. 4,779</td><td>S, M, L, XL</td>
+    </tr>
+    
+    <tr>
+      <td>TW-009</td>
+      <td>SANE ORIGINALS Striped Polo Collar T-shirt</td>
+      <td>Grey striped polo collar t-shirt, regular fit.</td>
+      <td>Rs. 3,839</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-010</td>
+      <td>Graphic Printed Oversized T-shirt</td>
+      <td>Drop-shoulder oversized cotton t-shirt with graphic print.</td>
+      <td>Rs. 2,979</td>
+      <td>M, L, XL, XXL</td>
+    </tr>
+
+    <tr>
+      <td>TW-011</td>
+      <td>JUMPCUTS Typography Printed Polo Collar T-shirt</td>
+      <td>Full-sleeve typography printed polo t-shirt.</td>
+      <td>Rs. 5,459</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <tr>
+      <td>TW-012</td>
+      <td>Status Quo Hooded Sweatshirt</td>
+      <td>Sky-blue cotton blend hoodie with typography print.</td>
+      <td>Rs. 3,479</td>
+      <td>M, L, XL, XXL</td>
+    </tr>
+
+    <!-- Bottom Wears -->
+
+    <tr><th colspan="5">Bottom Wears</th></tr>
+
+    <tr>
+      <td>BW-001</td>
+      <td>Roadster Baggy Fit Heavy Fade Denim Jeans</td>
+      <td>Casual Denim Jeans with heavy fade wash.</td>
+      <td>Rs. 4,369</td>
+      <td>30, 32, 34, 36</td>
+    </tr>
+
+    <tr>
+      <td>BW-002</td>
+      <td>Roadster Cargo Chinos – Khaki</td>
+      <td>Regular-fit khaki cargo trousers with utility pockets.</td>
+      <td>Rs. 3,849</td><td>30, 32, 34, 36</td>
+    </tr>
+
+    <tr>
+      <td>BW-003</td>
+      <td>MOOSE Semi-Formal Chino Pant – Dark Blue</td>
+      <td>Slim-fit semi-formal chino pants in dark blue.</td>
+      <td>Rs. 3,539</td>
+      <td>30, 32, 34, 36</td>
+    </tr>
+
+    <tr>
+      <td>BW-004</td>
+      <td>Modern Soul Men Cotton Track Pants – Brown</td>
+      <td>Comfortable cotton mid-rise track pants.</td>
+      <td>Rs. 2,699</td>
+      <td>S, M, L, XL</td>
+    </tr>
+
+    <!-- Accessories -->
+
+    <tr><th colspan="5">Accessories</th></tr>
+
+    <tr>
+      <td>ACC-001</td>
+      <td>Provogue Men’s Leather Belts (Pack of 2)</td>
+      <td>Set of two textured black leather belts.</td>
+      <td>Rs. 2,649</td>
+      <td>Free Size</td>
+    </tr>
+
+    <tr>
+      <td>ACC-002</td>
+      <td>Roadster Silver-Plated Chain Bracelet</td>
+      <td>Stylish men’s silver-plated link chain bracelet.</td>
+      <td>Rs. 979</td>
+      <td>Free Size</td>
+    </tr>
+
+    <tr>
+      <td>ACC-003</td>
+      <td>Fastrack Analogue Men’s Watch</td>
+      <td>Stainless steel strap watch with black dial.</td>
+      <td>Rs. 7,750</td>
+      <td>Free Size</td>
+    </tr>
+    
+    <tr>
+      <td>ACC-004</td>
+      <td>SELLORIA Cotton Baseball Cap</td>
+      <td>Black cotton baseball cap with patch detail.</td>
+      <td>Rs. 1,199</td>
+      <td>Adjustable</td>
+    </tr>
+
+    <!-- Footwear -->
+
+    
+    <tr><th colspan="5">Footwear</th></tr>
+
+    <tr>
+      <td>FW-001</td>
+      <td>PENNEN White Sneakers</td>
+      <td>Textured and patterned white sneakers.</td>
+      <td>Rs. 4,399</td>
+      <td>40, 41, 42, 43, 44</td>
+    </tr>
+
+    <tr>
+      <td>FW-002</td>
+      <td>BRUTON Aviator Sneakers – White & Blue</td>
+      <td>Two-tone casual sneakers, lace-up design.</td>
+      <td>Rs. 5,989</td>
+      <td>40, 41, 42, 43, 44</td>
+    </tr>
+
+    <tr>
+      <td>FW-003</td>
+      <td>Vellinto GIZMO Outdoor Military Boots</td>
+      <td>Black rugged outdoor lace-up boots.</td>
+      <td>Rs. 6,679</td>
+      <td>40, 41, 42, 43, 44</td>
+    </tr>
+
+    <tr>
+      <td>FW-004</td>
+      <td>Killer Brown Tan Printed Sliders</td>
+      <td>Comfortable slip-on sliders in brown tan.</td>
+      <td>Rs. 2,879</td>
+      <td>40, 41, 42, 43</td>
+    </tr>
+
+  </table>
+</div>
+
+<div class="container">
+  <div class="section" id="size_chart">
+      <h3>Size Chart</h3>
+      <table border="1">
+        
+          <tr>
+            <th>Size</th>
+            <th>Chest (inches)</th>
+            <th>Waist (inches)</th>
+            <th>Hips (inches)</th>
+          </tr>
+        
+          <tr>
+            <td>S</td>
+            <td>35-37</td>
+            <td>29-31</td>
+            <td>35-37</td>
+          </tr>
+
+          <tr>
+            <td>M</td>
+            <td>38-40</td>
+            <td>32-34</td>
+            <td>38-40</td>
+          </tr>
+
+          <tr>
+            <td>L</td>
+            <td>41-43</td>
+            <td>35-37</td>
+            <td>41-43</td>
+          </tr>
+
+          <tr>
+            <td>XL</td>
+            <td>44-46</td>
+            <td>38-40</td>
+            <td>44-46</td>
+          </tr>
+
+          <tr>
+            <td>XXL</td>
+            <td>47-49</td>
+            <td>41-43</td>
+            <td>47-49</td>
+          </tr>
+       
+      </table>
+    </div>
+</div>
+
+</div>
+
+<!-- Footer Section -->
+
+  <div class="footer">
+    <div class="footer-top">
+      <div>
+        <h4>Style Loop</h4>
+        <p class="tag-line">Timeless collections and fresh drops. Designed for comfort, made to last.</p>
+        <img src="Images/Rewards.png">
+      </div>
+      
+       <div class="contacts">
+        <h4>Contacts</h4>
+        <P>&nbsp;&nbsp;<img src="Images/WhatsApp_icon.png">&nbsp;&nbsp;+94 71 123 4567</P>
+        <p><img src="Images/Call_icon.png">+94 81 765 4321</p>
+        <p><img src="Images/Mail_icon.png">styleloop@gmail.com</p>
+        <p><span><img src="Images/Location_icon.png"></span>123, Peradeniya Rd, Kandy</p>
+       
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="Home_Page.html">Home</a></p>
+        <p><a href="About_Page.html">About us</a></p>
+        <p><a href="Collections_Page.html">Collections</a></p>
+        <p><a href="Contact_Page.html">Contact us</a></p>
+      </div>
+
+      <div >
+        <h4>Store Timings</h4>
+        <p>Mon–Fri : 8.30 AM – 7.30 PM</p>
+        <p>Saturday : 8.30 AM – 2.30 PM</p>
+        <p>Sunday : Closed</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+     © 2025 Style Loop. All rights reserved. | Privacy Policy | Terms of Service
+    </div>
+
+  </div>
+</body>
+</html>

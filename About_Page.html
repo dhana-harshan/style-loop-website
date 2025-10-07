@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Loop | About us</title>
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <style>
+
+      /* Background Section */
+
+        html body {
+            background-color:rgb(50, 47, 47);
+        }
+        
+      /* Header section */
+
+        .header{
+            background-color:#222;
+            width:auto;
+            height:auto;
+            display:flex; align-items:center; justify-content:space-between;
+            border-bottom: 3px solid #d1b53c;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .header a{
+            text-decoration: none;
+        }
+        .branding {
+            display:flex; align-items:center; justify-content:space-between;
+            padding: 14px 10px;
+        }
+        .branding img{
+            width: 80px; height:85px; border-radius:10px;
+            background: var(--primary);
+            display:block;
+            align-content: center;
+        }
+        .branding h1{
+            font: size 6px;
+            color:#d1b53c;
+            display: flex;
+        }
+        .nav a{
+            display: inline-block;
+            align-items:center;
+            justify-content:space-between;
+            padding: 14px 0px;
+            text-decoration:none; 
+            color:#ddc56e;
+            padding: 8px 14px; 
+            border-radius: 12px; 
+            font-weight: 600;
+            transition: transform 0.3s;
+
+        }
+        .nav a:hover{background-color:#c0a9170d;}
+        .nav a.active{
+            background:#dfc360; 
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+
+         /* About Us Sction */
+
+        .about_sec{
+        padding: 16px 0 8px;
+        } 
+        .about_sec h3{ 
+          margin: 0 0 8px;
+          color:goldenrod;
+        } 
+        .container , .section-block {
+        width: min(1250px, 92%);
+        margin: 0 auto;
+        color:white;
+        
+        font-size:24px;
+        }
+
+        .section-block {
+          background-color: rgba(65, 65, 65, 0.6); 
+          width:100%;
+          padding: 15px 25px 8px;
+          margin: 0 auto;
+          border-radius: 15px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+         .section-block:hover {
+          transform: translateY(-8px); 
+          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .about_sec ul li{
+        padding: 7px;
+        } 
+
+      /* Footer Secton */
+
+      .footer{
+        margin-top: 38px;
+        background: #222;
+        color: #ddc56e;
+        border-top: 3px solid #d1b53c;
+      }
+
+     .footer-top {
+        padding: 22px 0;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 2fr 1fr 0.5fr 1fr; 
+        max-width: 1200px;
+        margin: 0 auto; 
+      }
+      .footer h4{ 
+          margin: 6px 0 8px; 
+          font-size: larger;
+      }
+      .footer a{ color:#ddc56e; 
+        text-decoration:none;
+      }
+      .footer a:hover{background-color:#cdb6220d;}
+      .footer a:hover{color:yellow;}
+
+      .footer-bottom{
+        padding: 10px 0;
+        border-top: 2px solid #625f3d;
+        font-size: 0.9rem;
+        color: #ddc56e;
+        text-align: center; 
+      }
+      .footer-top img{
+        width: auto;
+        height: 60px;
+      }
+      .tag-line{
+        font-size: large;
+      }
+        .contacts img{
+        width:auto;
+        height:15px;
+        object-position: 5px 2px;
+      }
+      .contacts span img{
+        width: auto;
+        height:25px;
+        object-position: 5px 3px ;
+        margin: 0px -3px 0px;
+        
+      }
+      .contacts p {
+        margin: 11px -16px 10px;
+      }
+      
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+     
+    <div class="header">
+        <a href="Home_Page.html">
+        <div class="branding">
+            <img src="Images/Logo.png" alt="Logo Image">
+            <h1>Style Loop</h1>
+        </div>
+        </a>
+        <div class="nav">
+            <a href="Home_Page.html">Home</a>
+            <a class="active" href="About_Page.html">About</a>
+            <a href="Collections_Page.html">Collections</a>
+            <a href="Contact_Page.html">Contact</a>
+        </div>
+        </div>
+    
+
+    <!-- About Section -->
+
+    <div class="container">
+
+      <!-- Story Section -->
+
+      <div class="about_sec">
+        <div class="section-block">
+          <h3>Our Story</h3>
+          <p>
+      <b>Style Loop</b> was founded in 2022 in Kandy out of a passion 
+      for creating stylish yet comfortable <b>men's clothing</b> for everyday life. 
+      We noticed that while many brands focused only on luxury or fast fashion, there was a 
+      gap in the market for affordable, high-quality <b>men's apparel</b> that blends 
+      both timeless design and modern trends. Which inspired us to create our brand, What started as a small local boutique and has now 
+      grown into a trusted clothing brand loved by students, young professionals, and families 
+      across Sri Lanka.
+    </p>
+    <p>
+      Our name, <em>Style Loop</em>, symbolizes continuity and connection—fashion that always 
+      comes full circle. Every piece we design is made with care, ensuring not only durability 
+      but also a sense of belonging—because clothes are more than fabric, they're part of your 
+      everyday story.
+    </p>
+      </div>
+    </div>
+
+       <!-- Vision Section -->
+        
+       <div class="about_sec">
+        <div class="section-block">
+        <h3>Our Vision</h3>
+        <p>
+          To become Sri Lanka's most trusted and loved everyday-wear <b>men's clothing brand</b>—known 
+      for delivering uncompromised quality, exceptional comfort, and sustainable practices, 
+      while inspiring confidence in everyone who wears our products.
+        </p>
+       </div>
+       </div>
+
+       <!-- Mission Section -->
+
+       <div class="about_sec">
+        <div class="section-block">
+        <h3>Our Mission</h3>
+        <ul>
+          <li>Design versatile <b>men's clothing</b> that transitions seamlessly from study sessions to social outings.</li>
+          <li>Use breathable, durable, and responsibly sourced fabrics to ensure long-lasting comfort.</li>
+          <li>Offer fair and transparent pricing so everyone can enjoy premium-quality apparel.</li>
+          <li>Innovate with modern fashion trends while keeping a timeless touch in every design.</li>
+          <li>Support the local community by collaborating with Sri Lankan suppliers and artisans.</li>
+        </ul>
+        </div>
+       </div>
+
+       <!-- Values Section -->
+
+       <div class="about_sec">
+        <div class="section-block">
+        <h3>Our Values</h3>
+        <ul>
+            <li><b>Quality First:</b> Every stitch matters. We never compromise on the fabrics or construction of our clothes.</li>
+            <li><b>Comfort Always:</b> Fashion should fit into your life, not the other way around. Our designs ensure ease of movement and wear.</li>
+            <li><b>Transparency:</b> From pricing to fabric care, we keep everything honest and straightforward for our customers.</li>
+            <li><b>Sustainability:</b> We prioritize small production runs, reducing waste and ensuring every product is meaningful.</li>
+            <li><b>Community Driven:</b> We're proud to design with Sri Lanka in mind—styles that fit the climate, lifestyle, and culture of our people.</li>
+            <li><b>Highly Rated Products:</b> Nearly all of our items are rated above 4.5 stars, reflecting the trust and satisfaction of our customers.</li>
+            <li><b>Recognized Excellence:</b> Proud recipient of BestWeb.lk 2023 – Most Popular e-Commerce Website, proving the trust and love our community has for Style Loop.</li>
+            <li><b>Award-Winning Standards:</b> Honored at BestWeb.lk 2024, a recognition of our continuous commitment to quality, innovation, and user-friendly design.</li>
+        </ul>
+        </div>
+       </div>
+
+       <!-- Why Choose Us Section -->
+
+      <div class="about_sec">
+        <div class="section-block">
+        <h3>Why Choose Style Loop?</h3>
+    <p>
+      Choosing Style Loop means choosing more than just clothes—it means choosing 
+      a lifestyle built on quality and trust. Our collections are carefully curated 
+      for men who want to look stylish without sacrificing comfort. 
+    </p>
+    <p>
+      From breathable <em>linen shirts</em> for the warm Sri Lankan weather to durable 
+      <em>chino pants</em> that last through years of use, every item is designed with 
+      the modern man in mind. Our growing accessories line, including belts, watches, and 
+      backpacks, completes the look with a confident, modern edge.
+    </p>
+      </div>
+    </div>
+
+      <!-- Looking Ahead Section -->
+
+    <div class="about_sec">
+      <div class="section-block">
+      <h3>Looking Ahead</h3>
+    <p>
+      As we continue to grow, Style Loop is committed to embracing sustainable fashion 
+      practices and expanding our reach across Sri Lanka and beyond. Our goal is to 
+      empower men through clothing that gives them confidence—whether they are 
+      students stepping into class, professionals entering the workplace, or friends 
+      enjoying a weekend together. 
+    </p>
+    <p>
+      <b>Style Loop isn't just about fashion—it's about keeping comfort, 
+      quality, and style always in motion.</b>
+    </p>
+      </div>
+    </div>
+
+    </div>
+
+<!-- Footer Section -->
+
+  <div class="footer">
+    <div class="footer-top">
+      <div>
+        <h4>Style Loop</h4>
+        <p class="tag-line">Timeless collections and fresh drops. Designed for comfort, made to last.</p>
+        <img src="Images/Rewards.png">
+      </div>
+      
+       <div class="contacts">
+        <h4>Contacts</h4>
+        <P>&nbsp;&nbsp;<img src="Images/WhatsApp_icon.png">&nbsp;&nbsp;+94 71 123 4567</P>
+        <p><img src="Images/Call_icon.png">+94 81 765 4321</p>
+        <p><img src="Images/Mail_icon.png">styleloop@gmail.com</p>
+        <p><span><img src="Images/Location_icon.png"></span>123, Peradeniya Rd, Kandy</p>
+       
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="Home_Page.html">Home</a></p>
+        <p><a href="About_Page.html">About us</a></p>
+        <p><a href="Collections_Page.html">Collections</a></p>
+        <p><a href="Contact_Page.html">Contact us</a></p>
+      </div>
+
+      <div >
+        <h4>Store Timings</h4>
+        <p>Mon–Fri : 8.30 AM – 7.30 PM</p>
+        <p>Saturday : 8.30 AM – 2.30 PM</p>
+        <p>Sunday : Closed</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+     © 2025 Style Loop. All rights reserved. | Privacy Policy | Terms of Service
+    </div>
+
+  </div>
+</body>
+</html>
