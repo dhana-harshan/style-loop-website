@@ -83,9 +83,9 @@ This website was created as a **front-end college assignment** to demonstrate pr
 * **Institute:** ICBT Campus – Kandy
 * **Year:** 2025
 
- is for **educational purposes only**.
-All images are used under fair use for academic demonstration.
-
 ---
 
-Would you like me to make it even shorter and formatted specifically for **GitHub display** (optimized for how README.md appears visually on the site)?
+### 🏁 License
+
+This project is for **educational purposes only**.
+All images are used under fair use for academic demonstration.
